@@ -1,0 +1,38 @@
+
+
+
+<h2>Arrange Your Task Here</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-4">
+            <div class="listdraggable list-group"><h4>Open</h4>
+                <span class="list-group-item"  *ngFor="let ans of result" (onDrag)="onItemDrag($event)" draggable  [dragData]="ans" [attr.for]="ans.title+'#'+ans.description+'#'+ans.status+'#'+ans.date+'#'+ans.id">{{ans.title}}</span>
+               
+           
+            </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="listdroppable list-group"(onDrop)="onItemDrop($event)"droppable>
+                    <h4>in In-progress</h4>
+                    <li class="list-group-item" *ngFor="let ans of progress">
+                        {{ans.title}}
+
+                    </li>
+                   
+                      
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="listdroppable list-group"(onDrop)="onItemDrop($event)"droppable>
+                    <h4>Complete</h4>
+                    <li class="list-group-item" *ngFor="let ans of complete">
+                        {{ans.title}}
+
+                    </li>
+
+            </div>
+        </div>
+    </div>
+
+
+

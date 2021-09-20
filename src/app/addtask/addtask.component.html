@@ -1,0 +1,14 @@
+<div class="container">
+    <h2 class="text-content" style="text-align: center; border:solid 1px;">Add your Task Details</h2>
+    <input type="text" class="form-control"#title><br>
+    <label>Description</label>
+    <textarea class="form-control"#desc></textarea><br>
+    <select class="form-control"#status>
+        <option value="1">open</option>
+        <option value="2"disabled>In-progress</option>
+        <!-- <option value="3"disabled>Completed</option> -->
+    </select>
+    <br>
+    <button class="form-control" class="btn btn-primary" (click)="add_task(title,desc,status)">Add</button>
+    <p>{{msg}}</p>
+</div>
